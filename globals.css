@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  height: 70px;
+}
+
+.navbar_main {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #fff;
+  background: linear-gradient(to right, #4ee8f3, #9198e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.nav_link {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav_link li {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav_link a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s ease;
+}
+
+.nav_link a:hover {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+/* Search box */
+.search-box input {
+  padding: 15px 20px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+  border-color: #007BFF;
+}
+
+::placeholder {
+  font-size: 20px;
+}
+
+/* Responsive Design */
+
+/* For smaller screens, tablet & mobile */
+@media (max-width: 768px) {
+  .navbar_main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav_link {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    display: none; /* Hidden by default */
+  }
+
+  .nav_link.show {
+    display: flex;
+  }
+
+  .nav_link li {
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .heading {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .navbar {
+    height: auto;
+  }
+
+  .nav_link a {
+    font-size: 18px;
+  }
+
+  .search-box input {
+    width: 100%;
+    padding: 10px;
+  }
+}
